@@ -1,0 +1,680 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.loading::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    z-index: 999999999999999;
+    animation: up .7s;
+}
+
+@keyframes up {
+    0% {
+        bottom: 50%;
+    }
+
+    100% {
+        bottom: 100%;
+    }
+}
+
+.loading::before {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    z-index: 999999999999999;
+    animation: down .7s;
+}
+
+@keyframes down {
+    0% {
+        top: 50%;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+#nav-bar .my-nav {
+    background-color: white;
+    padding: 10px 0 5px 0;
+    box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    color: rgb(28, 28, 28);
+}
+
+.navbar {
+    --bs-navbar-toggler-border-color: unset;
+    --bs-navbar-toggler-border-radius: unset;
+    --bs-navbar-toggler-focus-width: unset;
+    --bs-navbar-toggler-transition: unset;
+}
+
+.navbar .navbar-nav li {
+    padding-inline: 20px;
+    text-align: center;
+}
+
+.navbar .container ul li .nav-link {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    position: relative;
+    color: #111 !important;
+    width: fit-content;
+    margin: auto;
+    overflow: hidden;
+    padding-inline: 0;
+}
+
+.navbar .container ul li .nav-link::after {
+    content: " ";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 70%;
+    left: 0px;
+    background-color: #222;
+    transform: translateX(-110%);
+    transition: transform .3s linear;
+}
+
+.navbar .container ul li .nav-link.active::after {
+    transform: translateX(0%);
+}
+
+.section-1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65) 0% 100%), url(../images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.section-1 .home-items h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+}
+
+.section-1 .home-items p {
+    font-size: 60px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+}
+
+.section-1 .social-link a {
+    padding-inline: 3px;
+}
+
+.section-1 .social-link span {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+
+.section-2 .about-img {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 6rem;
+}
+
+.section-2 .about-img::after {
+    content: "";
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: 0px;
+    bottom: -30px;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+.section-2 h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 31px;
+    color: rgb(52, 52, 52);
+}
+
+.section-2 .container .row .about-info span {
+    line-height: 20px;
+    font-size: 14px;
+    color: rgb(153, 153, 153);
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.section-2 .container .row .about-info p {
+    line-height: 21px;
+    font-size: 15px;
+    color: #748182;
+    font-family: "Poppins", sans-serif;
+}
+
+.progress-info {
+    margin-top: 35px;
+}
+
+.progress {
+    margin-bottom: 30px;
+    height: 25px;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+    background: #f7f7f7;
+    border-radius: 5px;
+}
+
+.progress h6 {
+    font-size: 13px;
+    font-family: "Montserrat", sans-serif;
+    padding-top: 10px;
+}
+
+.section-2 .only-btn {
+    background-color: #1c1c1c;
+    color: #eee;
+    transition: all 0.5s;
+}
+
+.section-2 .button-color {
+    border: 1px solid #1c1c1c;
+    padding: 10px 32px;
+    font-size: 13px;
+    margin-bottom: 4rem;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.5s;
+}
+
+.section-2 .button-color:hover {
+    background: #1c1c1c;
+    color: #eee;
+}
+
+.section-2 .only-btn:hover {
+    background: transparent;
+    color: #343434;
+}
+
+
+.section-3 {
+    background-color: #F7F7F7;
+}
+
+.section-3 .services-cards {
+    padding: 50px 20px;
+    background: #fff;
+    box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.section-3 span {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin: auto;
+    transition: all 0.5s;
+}
+
+.section-3 .services-cards:hover span {
+    background-color: #1C1C1C;
+    color: rgb(238, 238, 238);
+}
+
+.section-3 .services-items h2,
+.section-4 .services-items h2,
+.section-5 .services-items h2,
+.section-7 .services-items h2,
+.section-8 .services-items h2 {
+    font-size: 40px;
+    font-weight: 900;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(52, 52, 52);
+    position: relative;
+    width: fit-content;
+    margin: auto;
+    z-index: 4;
+}
+
+.section-3 .services-items h2::after,
+.section-4 .services-items h2::after,
+.section-5 .services-items h2::after,
+.section-7 .services-items h2::after,
+.section-8 .services-items h2::after {
+    content: "";
+    width: 100%;
+    height: 30px;
+    background-image: url(../images/dots.png);
+    background-repeat: repeat;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    z-index: -1;
+}
+
+.section-3 h4 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.section-3 p {
+    font-size: 14.5px;
+    font-family: "Poppins", sans-serif;
+    color: #748182;
+    margin-top: 10px;
+}
+
+
+.section-4 li button {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.section-4 li button span {
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    color: rgb(34, 34, 34) !important;
+    font-size: 16px;
+    position: relative;
+    margin: 0 1px;
+}
+
+.section-4 li button span::before {
+    content: "";
+    width: 0;
+    height: 2.5px;
+    background: #111;
+    position: absolute;
+    left: 0%;
+    bottom: -5px;
+    transition: all 0.5s;
+}
+
+.section-4 li button.active span::before {
+    content: "";
+    width: 95%;
+    height: 2.5px;
+    background: #111;
+    position: absolute;
+    left: 0%;
+    bottom: -5px;
+}
+
+.section-4 .layout {
+    background-color: rgba(255, 255, 255, 0.95);
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.5s;
+}
+
+.section-4 .portifilo-cards:hover .layout {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.section-4 .portifilo-items h6 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    transform: translateY(-15px);
+    transition: all 0.5s;
+}
+
+.section-4 .portifilo-cards:hover h6 {
+    transform: translateY(0px);
+}
+
+.section-4 .portifilo-items .portifilo-icons i {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #111;
+    background-color: #111;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-4 .portifilo-items .portifilo-icons i:hover {
+    color: #111;
+    background-color: #eee;
+}
+
+
+.section-5 {
+    background-color: #F7F7F7;
+}
+
+.section-5 img {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 15px;
+}
+
+.section-5 p {
+    font-size: 0.9375rem;
+    color: #748182;
+    word-spacing: 2px;
+    line-height: 1.6;
+    font-family: "Poppins", sans-serif;
+}
+
+.section-5 h6 {
+    margin: 30px 0 5px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.section-5 span {
+    font-size: 12px;
+    font-weight: 600;
+    color: #888;
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+    display: block;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #d6d6d6;
+    margin-inline: 7px;
+    transition: all 0.2s;
+}
+
+.carousel-indicators [data-bs-target].active,
+.carousel-indicators [data-bs-target]:hover {
+    background-color: #869791;
+    opacity: 1;
+}
+
+
+.section-6 {
+    padding: 4.25rem 0;
+}
+
+.section-6 .container span {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.section-6 .container h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.section-6 .container p {
+    font-size: 15px;
+    color: #748182;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.section-7 {
+    background-color: #F7F7F7;
+}
+
+.section-7 .our-teams {
+    padding-left: 5px;
+    margin-top: 20px;
+}
+
+.section-7 h5 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    padding-bottom: 25px;
+}
+
+.section-7 h4 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.section-7 .teams-icons span {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    color: #fff;
+    background-color: #000;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-7 .teams-icons li {
+    padding: 0 8px;
+}
+
+.section-7 .teams-detail {
+    background-color: #5B5B5B;
+}
+
+.section-7 .teams-icons {
+    background-color: rgba(255, 255, 255, 0.95);
+    position: absolute;
+    text-align: center;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.5s;
+    transform: rotateY(180deg) scale(0.5);
+}
+
+.section-7 .teams-info:hover .teams-icons {
+    transform: rotateY(0deg);
+    opacity: 1;
+}
+
+.section-7 .teams-info img {
+    transition: transform 0.4s ease;
+}
+
+.section-7 .teams-info:hover img {
+    transform: scale(1.2);
+}
+
+.section-7 .our-teams:hover .teams-icons {
+    transform: rotateY(0deg);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.section-7 span:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+
+.section-8 span {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    margin-bottom: 15px;
+    margin: auto;
+    transition: all 0.5s;
+}
+
+.section-8 .contact-info:hover span {
+    color: #eee;
+    background-color: #1C1C1C;
+}
+
+.section-8 h6 {
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.section-8 p {
+    font-size: 15px;
+    color: #748182;
+    font-family: "Poppins", sans-serif;
+}
+
+.section-8 .form input,
+.section-8 .form textarea {
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #f4f4f4;
+}
+
+.section-8 .form textarea {
+    width: 100%;
+    max-width: 100%;
+    max-height: 160px;
+    resize: both;
+    overflow: auto;
+}
+
+.section-8 .form input:focus,
+.section-8 .form textarea:focus {
+    outline-style: none;
+    box-shadow: none;
+}
+
+.section-8 .button {
+    border: 1px solid #1c1c1c;
+    padding: 7px 40px;
+    color: #eee;
+    font-size: 15px;
+    background-color: #1c1c1c;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.5s;
+}
+
+.section-8 .button:hover {
+    color: #1C1C1C;
+    background-color: #eee;
+}
+
+
+.section-9 {
+    background-color: #1C1C1C;
+    padding: 18px 0;
+}
+
+.section-9 p {
+    color: #748182;
+    font-size: 13px;
+    font-family: "Poppins", sans-serif;
+    padding-top: 15px;
+    word-spacing: 2px;
+}
+
+
+@media screen and (max-width:740px) {
+    .section-1 .home-items p {
+        font-size: 30px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 200;
+    }
+}
+
+@media (min-width:740px) and (max-width:1115px) {
+    .section-1 .home-items p {
+        font-size: 44px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 200;
+    }
+}
+
+@media all and (max-width: 760px) {
+
+    .container-xxl,
+    .container-xl,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container {
+        max-width: 1120px;
+    }
+}
+
+@media all and (min-width: 760px) {
+    .section-5 p {
+        font-size: 15px;
+        color: #748182;
+        word-spacing: 0px;
+        line-height: 1.6;
+        width: 100%;
+        font-family: "Poppins", sans-serif;
+    }
+}
+
+@media all and (min-width: 992px) {
+    .section-5 .carousel {
+        width: 80%;
+        margin: auto;
+    }
+
+}
+
+@media all and (min-width: 1400px) {
+
+    .container-xxl,
+    .container-xl,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container {
+        max-width: 1140px;
+    }
+}
